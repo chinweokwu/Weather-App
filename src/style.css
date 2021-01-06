@@ -20,15 +20,28 @@ body {
 	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
 	background-color: #343d4b;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
+	/* display: -webkit-box;
+	display: -ms-flexbox; */
+/* display: flex; */
+	/* -webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
-	        justify-content: center;
+	        justify-content: center; */
+}
+.notification{
+	background-color: #f8d7da;
+	display: none;
+	/* margin-top: -500px */
+}
+
+.notification p{
+	color: #721c24;
+	font-size: 1.2em;
+	margin: 0;
+	text-align: center;
+	padding: 10px 0;
 }
 
 .container {
@@ -38,6 +51,7 @@ body {
 	background-color: #222831;
 	color: #ffffff;
 	height: 400px;
+	width: fit-content; 
 }
 
 .weather-side {
