@@ -14,6 +14,25 @@ const weatherDisplay = (weather) => {
   pressureElement.innerHTML = `${weather.pressure} mb`;
   windElement.innerHTML = `${weather.wind} km/h`;
   locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+
+  function celsiusToFahrenheit(temp) {
+    // eslint-disable-next-line no-mixed-operators
+    return (temp * 9 / 5) + 32;
+  }
+  tempElement.addEventListener('click', () => {
+    if (weather.temperature.value === undefined) return;
+
+    // eslint-disable-next-line eqeqeq
+    if (weather.temperature.unit == 'celsius') {
+      let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
+      fahrenheit = Math.floor(fahrenheit);
+      tempElement.innerHTML = `${fahrenheit}°<span>F<span>`;
+      weather.temperature.unit = 'fahrenheit';
+    } else {
+      tempElement.innerHTML = `${weather.temperature.value}°<span>C<span>`;
+      weather.temperature.unit = 'celsius';
+    }
+  });
 };
 
 export { weatherDisplay as default };
