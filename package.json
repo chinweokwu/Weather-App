@@ -20,12 +20,15 @@
   },
   "homepage": "https://github.com/chinweokwu/Weather-App#readme",
   "dependencies": {
+    "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.11.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "dotenv-webpack": "^6.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
