@@ -56,9 +56,14 @@ const formDisplay = () => {
     </div>
   </div>
   <div class="location-container">
-    <button class="location-button">
+  <form>
+    <div class="user-box">
+        <input type="text" name="todo" placeholder ='Enter Location'>
+    </div>
+    <button type='submit' class="location-button">
       <span>change location</span>
     </button>
+  </form>  
   </div>
 </div>`;
 };

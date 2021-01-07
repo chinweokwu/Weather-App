@@ -23,7 +23,6 @@ body {
 
 }
 
-
 .container {
 	border-radius: 25px;
 	-webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
@@ -31,7 +30,8 @@ body {
 	background-color: #222831;
 	color: #ffffff;
 	height: 400px;
-	width: fit-content; 
+	width: fit-content;
+	margin-top: 50px;
 }
 
 .weather-side {
@@ -179,4 +179,29 @@ body {
 	height: 1em;
 	width: auto;
 	margin-right: 5px;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+	margin-bottom: 30px;
+	border: none;
+  border-bottom: 1px solid rgb(69, 82, 143);
+  outline: none;
+  background: transparent;
+}
+
+.notification{
+	background-color: #f8d7da;
+	display: none;
+}
+
+.notification p{
+	color: #721c24;
+	font-size: 1.2em;
+	margin: 0;
+	text-align: center;
+	padding: 10px 0;
 }

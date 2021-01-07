@@ -1,15 +1,23 @@
 import displayWeather from './weatherDisplay';
 
-const getWeatherData = (arr) => {
-  const latitude = arr[0];
-  const longitude = arr[1];
+const getWeatherData = (arr, str) => {
+  const notify = document.querySelector('.notification');
   const APIKEY = process.env.SECRET_KEY;
   const KELIVN = 273;
   const weather = {};
   weather.temperature = {
     unit: 'celsius',
   };
-  const api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`;
+  let api;
+  if (str === 'coordinate') {
+    const latitude = arr[0];
+    const longitude = arr[1];
+    api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`;
+  } else if (str === 'city') {
+    const city = arr;
+    api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`;
+  }
+
   // console.log(api);
   fetch(api)
     .then(response => {
@@ -28,6 +36,10 @@ const getWeatherData = (arr) => {
     })
     .then(() => {
       displayWeather(weather);
+    })
+    .catch((error) => {
+      notify.style.display = 'block';
+      notify.innerHTML = `<p>${error.message}</p>`;
     });
 };
 
