@@ -19,7 +19,7 @@
 - Install Node in your system. To install Node, you can read the [Documentation](https://nodejs.org/en/download/package-manager/)
 - Clone the repo or download the zip file into your machine.
   ```
-  git clone https://github.com/Miguelus373/Weather-App.git
+  git clone https://github.com/chinweokwu/Weather-App.git
   ```
 - On your terminal, CD into the Weather-App folder and run
   ```
