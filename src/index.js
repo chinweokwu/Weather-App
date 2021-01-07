@@ -2,7 +2,7 @@ import './style.css';
 import weatherDisplay from './formDisplay';
 import getWeather from './getweather';
 import date from './timedate';
-import getBtn from './button';
+
 
 weatherDisplay();
 date();
@@ -16,8 +16,6 @@ const geoLocation = () => {
   });
 };
 geoLocation();
-getBtn();
-
 
 form.addEventListener('submit', e => {
   e.preventDefault();
